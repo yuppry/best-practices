@@ -24,7 +24,14 @@ completed.
   61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz
   Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz
   ```
-
+for num in range(1,101):
+    # print(num)
+    if num % 3 == 0:
+        print('Fizz')
+    elif num % 5 == 0:
+        print('Buzz')
+    else:
+        print(num)
 2. Write a program that determine whether or not an integer input is a leap year.
   - Definition of leap year:
     - Rule 1: A year is called leap year if it is divisible by 400.
@@ -43,7 +50,13 @@ completed.
   2008 -> true
   2010 -> false
   ```
-
+  def leap_year(year):
+    if year % 4 == 0:
+        return True
+    else:
+        return False
+for year in range (2000,2014):
+    print(year,'-->',leap_year(year))
 3. Write a program that produce the following output giving an integer input n.
   * 3.1
 ```
@@ -115,11 +128,20 @@ n=1		n=2     n=3         n=4
 
 4. (Python specific) In Python, what is the difference between `else` and `finally` in exception handling?
 
+Else: execute when the code in the try statement not match an exception.
+Finally: always executed before completed the try statement. Or This always executed.
+
 ## Medium
 1. Write a program that finds all prime numbers up to n for input n.
 **Example Output:**
 ```
 20 -> 2 3 5 7 11 13 17 19
 ```
+for n in range (0,21):
+ for i in range(2,n):
+    if n%i== 0:
+       break
+    else:
+       print(n)
 
 ## Hard
